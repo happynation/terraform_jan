@@ -1,5 +1,5 @@
 variable "amitype" {}
 variable "sgs" {
-    type = "list"
+    type = "string"
     default = "sg-d1b9e784"
 }
