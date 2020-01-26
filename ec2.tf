@@ -1,7 +1,7 @@
 resource "aws_instance" "test" {
-  ami           = "${lookup(var.amitype,var.region)}"
+  ami           = "${lookup(var.ami_type,var.region)}"
   instance_type = "t2.micro"
-  security_groups = "${var.sgs}"
+  security_groups = "${lookup(var.instance_type,var.env)}"
   
 
 
