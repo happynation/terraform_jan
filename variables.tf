@@ -4,6 +4,7 @@ variable "ami_type" {
         us-east-1 = "ami-062f7200baf2fa504"
         us-east-2 = "ami-062f7200baf2fa505"
         }
+}
 variable "env"{}
 variable "region" {}
 variable " instance_type"{
