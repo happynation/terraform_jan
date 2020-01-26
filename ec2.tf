@@ -1,6 +1,6 @@
 resource "aws_instance" "test" {
-  ami           = "ami-062f7200baf2fa504"
-  instance_type = "t2.micro"
+  ami           = "${var.amitype}"
+  instance_type = "${var.instance_type}"
 
   tags = {
     Name = "test_vova"
