@@ -7,7 +7,7 @@ variable "ami_type" {
 }
 variable "env"{}
 variable "region" {}
-variable " instance_type"{
+variable "instance_type"{
     type = "map"
     default {
         dev = "t2.micro"
@@ -16,6 +16,6 @@ variable " instance_type"{
 }
 
 variable "sgs" {
-    type = "string"
+    type = "list"
     default = ["sg-d1b9e784","sg-21078c44"]
 }
