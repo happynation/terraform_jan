@@ -14,6 +14,7 @@ resource "aws_db_instance" "prod"
   vpc_security_group_ids = ["${aws_security_group.rds-prod.id}"]
   db_subnet_group_name = "${aws_db_subnet_group.rds_subnet_group.name}"
   multi_az = "true"
+  skip_final_snapshot = "true"
 
 }
 
