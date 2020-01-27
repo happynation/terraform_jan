@@ -18,6 +18,3 @@ resource "aws_security_group" "rds-prod"{
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-tags{
-    Name = "${var.PROJECT_NAME}-rds-production"
-  }
