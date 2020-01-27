@@ -11,6 +11,8 @@ resource "aws_db_instance" "prod"
   password = "${var.MASTER_PASSWORD}"
   vpc_security_group_ids = ["${aws_security_group.rds-prod.id}"]
   db_subnet_group_name = "${aws_db_subnet_group.rds_subnet_group.name}"
+  skip_final_snapshot = "true"
+  preferred_backup_window = "07:00-09:00"
   
 
 }
@@ -20,8 +22,8 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
     name          = "${var.PROJECT_NAME}_aurora_db_subnet_group"
     description   = "Allowed subnets for Aurora DB cluster instances"
     subnet_ids    = [
-      "subnet-05b8041c029f3ae95",
-      "subnet-03a820918b320be29",
+      "${var.PRIV_SUBNET_ID_1}",
+      "${var.PRIV_SUBNET_ID_2}",
     ]
 
     tags {

@@ -1,10 +1,9 @@
 # Project wide variable
 PROJECT_NAME                          = "demo"
+VPC_ID                                = ""
+PRIV_SUBNET_ID_1                      = ""
+PRIV_SUBNET_ID_2                      = ""
 
-# Varibles for the Providers
-#AWS_ACCESS_KEY                        = ""
-#AWS_SECRET_KEY                        = ""
-#AWS_REGION                            = "us-west-1"
 
 # RDS variable
 RDS_CIDR                              = "0.0.0.0/0"
@@ -16,15 +15,7 @@ MASTER_USERNAME                       = "test"
 MASTER_PASSWORD                       = "test123#$"
 DB_NAME                               = "mydb"
 
-# Ec2 Variables
-SSH_CIDR_WEB_SERVER                   = "0.0.0.0/0"
-SSH_CIDR_APP_SERVER                   = "0.0.0.0/0"
-WEB_SERVER_INSTANCE_TYPE              = "t2.micro"
-APP_SERVER_INSTANCE_TYPE              = "t2.micro"
-USER_DATA_FOR_WEBSERVER               = "./demo_code/web.sh"
-USER_DATA_FOR_APPSERVER               = "./demo_code/app.sh"
-PEM_FILE_APPSERVERS                   = "zox"
-PEM_FILE_WEBSERVERS                   = "zox"
+
 
 # VPC Variables
 VPC_CIDR_BLOCK                        = "10.0.0.0/16"
