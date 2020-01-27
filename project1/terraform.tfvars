@@ -8,14 +8,13 @@ PROJECT_NAME                          = "demo"
 
 # RDS variable
 RDS_CIDR                              = "0.0.0.0/0"
-DB_INSTANCE_CLASS                     = "db.t2.micro"
-RDS_ENGINE                            = "mysql"
-ENGINE_VERSION                        = "5.7.17"
-BACKUP_RETENTION_PERIOD               = "7"
+RDS_ENGINE                            = "aurora"
+ENGINE_VERSION                        = "5.6.10a"
+BACKUP_RETENTION_PERIOD               = "5"
 PUBLICLY_ACCESSIBLE                   = "true"
-RDS_USERNAME                          = "test"
-RDS_PASSWORD                          = "test123#$"
-RDS_ALLOCATED_STORAGE                 = "20"
+MASTER_USERNAME                       = "test"
+MASTER_PASSWORD                       = "test123#$"
+DB_NAME                               = "mydb"
 
 # Ec2 Variables
 SSH_CIDR_WEB_SERVER                   = "0.0.0.0/0"
