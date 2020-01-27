@@ -1,7 +1,7 @@
 resource "aws_security_group" "rds-prod"{
   
   name = "${var.PROJECT_NAME}-rds-production"
-  vpc_id      = "vpc-705e1217"
+  vpc_id      = "vpc-0ab1290480d3ac700"
   ingress
   {
     from_port = 3306
